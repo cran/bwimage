@@ -1,0 +1,51 @@
+\name{altitudinal_profile}
+\alias{altitudinal_profile}
+\title{
+Highest black pixel by sections
+}
+
+\description{
+Break the original matrix in a number of section ( n_sections), then find the higher black pixel in each image section.
+}
+
+\usage{
+altitudinal_profile(imagematrix, n_sections, height_size)
+}
+\arguments{
+  \item{imagematrix}{
+The matrix to be analysed.
+}
+  \item{n_sections}{
+Break the image in this number of columns. 
+}
+  \item{height_size}{
+Real size of image height (in mm, cm, m, etc..).
+}
+}
+
+\value{
+\item{Mean}{Height mean of the highest black pixel in sections.}
+\item{SD}{Standard deviations of the highest black pixel in sections.}
+\item{Size}{Height of the highest black pixel in sections.}
+}
+\references{
+Zehm A, Nobis M, & Schwabe A. (2003). Multiparameter analysis of vertical vegetation structure based on digital image processing. Flora. doi: 10.1078/0367-2530-00086
+}
+\author{
+Carlos Biagolini-Jr.
+}
+
+\seealso{
+threshold_color
+}
+\examples{
+# First, get a matrix from your image. Here an example of a bush image is used.
+bush<-system.file("extdata/bush.JPG",package ="bwimage")
+bush_imagematrix<-threshold_color(bush,  "jpeg",  "proportional", compress_rate = 0.1)
+
+# Profile  of  highest black pixels on sections of the bush image matrix
+altitudinal_profile(bush_imagematrix,n_sections = 10, height_size=100)
+# Conclusions: 
+# i)  the mean height of the highest black pixel is 45.28 cm.
+# ii) standard deviation of highest black height is 21.54.
+}

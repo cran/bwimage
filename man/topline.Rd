@@ -1,0 +1,46 @@
+\name{topline}
+\alias{topline}
+\title{
+Top line
+}
+\description{
+Line running along the crest of highest black pixel.
+}
+\usage{
+topline(imagematrix, height_size = NA, width_size = NA)
+}
+\arguments{
+  \item{imagematrix}{
+The matrix to be analysed.
+}
+  \item{height_size}{
+Real size of image height (in mm, cm, m, etc..).
+}
+  \item{width_size}{
+Real size of image width (in mm, cm, m, etc..).
+}
+}
+
+\value{
+Top line size that cover black pixels
+}
+\references{
+Zehm A, Nobis M, & Schwabe A. (2003). Multiparameter analysis of vertical vegetation structure based on digital image processing. Flora. doi: 10.1078/0367-2530-00086
+}
+\author{
+Carlos Biagolini-Jr.
+}
+
+
+\seealso{
+threshold_color
+}
+\examples{
+# First, get a matrix from your image. Here an example of a bush image is used.
+bush<-system.file("extdata/bush.JPG",package ="bwimage")
+bush_imagematrix<-threshold_color(bush,  "jpeg",  "proportional", compress_rate = 0.1)
+
+# See the proportion of black pixels (1) below each bush image matrix row
+topline(bush_imagematrix,100,100)
+# Conclusion: topline size is 785.6 cm.
+}
