@@ -1,38 +1,21 @@
 \name{denseness_row}
 \alias{denseness_row}
-\title{
-Denseness in row sections
-}
-\description{
-Calculate the denseness (proportion of black pixel in relation to the total number of pixels) for a given number of sections (n_sections). n_sections should be set as a number, in this situation denseness_row will break the original matrix in slices, and apply denseness_total function for each section. For instance, in a matrix of 1000x1000 if n_sections = 10, it will break to 10 sections of 100x1000 and analyze it. In other words, the sections will be the following sections of the original matrix [1:100, 1:1000] , [101:200, 1:1000] , [201:300, 1:1000] ,  [301:400, 1:1000] , [401:500, 1:1000] , [501:600, 1:1000] , [601:700, 1:1000] , [701:800, 1:1000] , [801:900, 1:1000] , [901:1000, 1:1000] .The default for parameter n_sections is "all", it will calculate denseness for each row of pixel. In other words, it will break the image in a number of section equal to the image pixel height.
-}
+\title{Denseness in row sections}
 \usage{
 denseness_row(imagematrix, n_sections = "all")
 }
 \arguments{
-  \item{imagematrix}{
-The matrix to be analysed.
-}
-  \item{n_sections}{
-Break the image in this number of rows.
-}
+\item{imagematrix}{The matrix to be analysed.}
+
+\item{n_sections}{Break the image in this number of rows.}
 }
 \value{
 \item{Denseness}{Denseness of each row section.}
 \item{Mean}{Mean of row sections denseness.}
 \item{SD}{standard deviations of row sections denseness.}
 }
-
-\references{
-Zehm A, Nobis M, & Schwabe A. (2003). Multiparameter analysis of vertical vegetation structure based on digital image processing. Flora. doi: 10.1078/0367-2530-00086
-}
-\author{
-Carlos Biagolini-Jr.
-}
-
-\seealso{
-denseness_total
-threshold_color
+\description{
+Calculate the denseness (proportion of black pixel in relation to the total number of pixels) for a given number of sections (n_sections). n_sections should be set as a number, in this situation denseness_row will break the original matrix in slices, and apply denseness_total function for each section. For instance, in a matrix of 1000x1000 if n_sections = 10, it will break to 10 sections of 100x1000 and analyze it. In other words, the sections will be the following sections of the original matrix [1:100, 1:1000] , [101:200, 1:1000] , [201:300, 1:1000] ,  [301:400, 1:1000] , [401:500, 1:1000] , [501:600, 1:1000] , [601:700, 1:1000] , [701:800, 1:1000] , [801:900, 1:1000] , [901:1000, 1:1000] .The default for parameter n_sections is "all", it will calculate denseness for each row of pixel. In other words, it will break the image in a number of section equal to the image pixel height.
 }
 \examples{
 # First, get a matrix from your image. Here an example of a bush image is used.
@@ -41,4 +24,13 @@ bush_imagematrix<-threshold_color(bush,  "jpeg", "proportional",compress_rate = 
 
 # Calculate vegetation denseness in 20 row sections
 denseness_row(bush_imagematrix, n_sections = 20)
+}
+\references{
+Zehm et al 2003 Multiparameter analysis of vertical vegetation structure based on digital image processing. Flora-Morphology, Distribution, Functional Ecology of Plants, 198: 142-160.
+}
+\seealso{
+denseness_total threshold_color
+}
+\author{
+Carlos Biagolini-Jr.
 }

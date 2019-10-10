@@ -1,26 +1,16 @@
 \name{hole_columm}
 \alias{hole_columm}
-\title{
-Holes description in columns sections
-}
-\description{
-Summary information of holes in a given number of columns (n_sections). n_sections must be set as a number, in this situation hole_columm will sample columns, and apply hole_section_data function for each section. Next, all results will be display on hole_columm output. Example of how column sample works: in a matrix of 250x250 if n_sections =  5 , it will sample columns 1,51,101,151, and 201 and analyze it. In other words, the sections will be following sections of the original matrix [1:250,1] , [1:250,51], [1:250,101], [1:250,151], [1:250,201]. The default for parameter n_sections is "all", it will calculate hole_section_data for each column of pixel. In other words, it will break the image in a number of section equal to the image pixel width.
-}
+\title{Holes description in columns sections}
 \usage{
 hole_columm(imagematrix, color = 0, n_sections = "all")
 }
 \arguments{
-  \item{imagematrix}{
-The matrix to be analysed.
-}
-  \item{color}{
-Color of the hole (0 or 1).
-}
-  \item{n_sections}{
-Sample this number of columns.
-}
-}
+\item{imagematrix}{The matrix to be analysed.}
 
+\item{color}{Color of the hole (0 or 1).}
+
+\item{n_sections}{Sample this number of columns.}
+}
 \value{
 \item{N}{Number of sections.}
 \item{Mean}{Mean sections size.}
@@ -29,18 +19,8 @@ Sample this number of columns.
 \item{Max}{Maximum sections size.}
 \item{LH}{Stratum with largest hole count.}
 }
-
-\references{
-Zehm A, Nobis M, & Schwabe A. (2003). Multiparameter analysis of vertical vegetation structure based on digital image processing. Flora. doi: 10.1078/0367-2530-00086
-}
-\author{
-Carlos Biagolini-Jr.
-}
-
-
-\seealso{
-hole_section_data
-threshold_color
+\description{
+Summary information of holes in a given number of columns (n_sections). n_sections must be set as a number, in this situation hole_columm will sample columns, and apply hole_section_data function for each section. Next, all results will be display on hole_columm output. Example of how column sample works: in a matrix of 250x250 if n_sections =  5 , it will sample columns 1,51,101,151, and 201 and analyze it. In other words, the sections will be following sections of the original matrix [1:250,1] , [1:250,51], [1:250,101], [1:250,151], [1:250,201]. The default for parameter n_sections is "all", it will calculate hole_section_data for each column of pixel. In other words, it will break the image in a number of section equal to the image pixel width.
 }
 \examples{
 # First, get a matrix from your image. Here an example of a bush image is used.
@@ -52,4 +32,13 @@ hole_columm(bush_imagematrix, n_sections=5 )
 
 # Information of black (i.e. 1s in matrix) holes in 20 columns uniformly sample among matrix.
 hole_columm(bush_imagematrix, n_sections=20 )
+}
+\references{
+Zehm et al 2003 Multiparameter analysis of vertical vegetation structure based on digital image processing. Flora-Morphology, Distribution, Functional Ecology of Plants, 198: 142-160.
+}
+\seealso{
+hole_section_data threshold_color
+}
+\author{
+Carlos Biagolini-Jr.
 }

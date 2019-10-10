@@ -1,35 +1,17 @@
 \name{hole_section}
 \alias{hole_section}
-\title{
-Hole finder
-}
-\description{
-Description of when a sequence of  same color pixel start and end. 
-}
+\title{Hole finder}
 \usage{
 hole_section(section)
 }
 \arguments{
-  \item{section}{
-Section to be analysed.
+\item{section}{Section to be analysed.}
 }
-}
-
 \value{
-Description of start and end of each same color sequence. Result is given in cell number.
+Description of start and end of each same color sequence
 }
-\references{
-Zehm A, Nobis M, & Schwabe A. (2003). Multiparameter analysis of vertical vegetation structure based on digital image processing. Flora. doi: 10.1078/0367-2530-00086
-}
-\author{
-Carlos Biagolini-Jr.
-}
-
-
-
-\seealso{
-hole_section_data
-threshold_color
+\description{
+Description of when a sequence of  same color pixel start and end.
 }
 \examples{
 # First, get a matrix from your image. Here an example of a bush image is used.
@@ -41,4 +23,13 @@ hole_section(bush_imagematrix[,200])
 
 # Find pixel hole sections in the row 250 of bush image
 hole_section(bush_imagematrix[250,])
+}
+\references{
+Zehm et al 2003 Multiparameter analysis of vertical vegetation structure based on digital image processing. Flora-Morphology, Distribution, Functional Ecology of Plants, 198: 142-160.
+}
+\seealso{
+hole_section_data threshold_color
+}
+\author{
+Carlos Biagolini-Jr.
 }

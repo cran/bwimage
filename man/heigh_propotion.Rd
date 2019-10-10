@@ -1,32 +1,14 @@
 \name{heigh_propotion}
 \alias{heigh_propotion}
-\title{
-Cumulative denseness for each line
-}
-\description{
-Proportion of black pixel below each matrix line.
-}
+\title{Cumulative denseness for each line}
 \usage{
 heigh_propotion(imagematrix)
 }
 \arguments{
-  \item{imagematrix}{
-The matrix to be analysed.
+\item{imagematrix}{The matrix to be analysed.}
 }
-}
-
-\value{
+\description{
 Proportion of black pixel below each matrix line.
-}
-\references{
-Zehm A, Nobis M, & Schwabe A. (2003). Multiparameter analysis of vertical vegetation structure based on digital image processing. Flora. doi: 10.1078/0367-2530-00086
-}
-\author{
-Carlos Biagolini-Jr.
-}
-
-\seealso{
-threshold_color
 }
 \examples{
 # First, get a matrix from your image. Here an example of a bush image is used.
@@ -35,4 +17,13 @@ bush_imagematrix<-threshold_color(bush,  "jpeg",  "proportional", compress_rate 
 
 # Proportion of black pixel below each matrix line.
 heigh_propotion(bush_imagematrix)
+}
+\references{
+Zehm et al 2003 Multiparameter analysis of vertical vegetation structure based on digital image processing. Flora-Morphology, Distribution, Functional Ecology of Plants, 198: 142-160.
+}
+\seealso{
+threshold_color
+}
+\author{
+Carlos Biagolini-Jr.
 }

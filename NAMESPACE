@@ -1,5 +1,6 @@
 export(aggregation_index)
 export(altitudinal_profile)
+export(compress)
 export(denseness_column)
 export(denseness_row)
 export(denseness_total)
@@ -12,16 +13,12 @@ export(hole_section)
 export(hole_section_data)
 export(image_information)
 export(light_gap)
+export(stretch)
 export(threshold_color)
 export(threshold_image_list)
 export(topline)
-
-
-importFrom(utils, txtProgressBar, setTxtProgressBar)
-importFrom(stats, sd)
-importFrom(jpeg, readJPEG)
-importFrom(png, readPNG)
-
-
-
-
+importFrom(jpeg,readJPEG)
+importFrom(png,readPNG)
+importFrom(stats,sd)
+importFrom(utils,setTxtProgressBar)
+importFrom(utils,txtProgressBar)
