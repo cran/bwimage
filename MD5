@@ -1,9 +1,9 @@
-a44759dd21c1afa21cc75eaaeb7a4286 *DESCRIPTION
-fde71a3cfec0c038a2ba0562509c382b *NAMESPACE
-0fb43608614f56f271d94c8dbca5c421 *R/ImageAnalysis.R
-55b5c42e64e7a72d2f6ba43c07a3a5a9 *R/IntFunctions.R
+95a1ee390e23d895209bb1b703f3f0e2 *DESCRIPTION
+f6eba1af0a3826be7b9edf6cdc51931e *NAMESPACE
+6d4e5be7b5f32ad6870c89b61607171f *R/ImageAnalysis.R
+467c1bf241c9b84dd0c9a2118f82541c *R/IntFunctions.R
 f4341c79ae925c46730aadd2f30ab446 *R/cnvIM.R
-7afea8446c34ad342537a24217d932d3 *build/partial.rdb
+722f4a0f3b1c31e149a8d50d7c2c7d0e *build/partial.rdb
 93e1fd024f80571034f43347d0175c34 *inst/extdata/Notes.txt
 0d83663a26bf7d5dd8c7f9db84e821cc *inst/extdata/bird_nestwall.png
 104eef1e396ab2c972eff6ecb17f89ae *inst/extdata/bush.JPG
@@ -15,6 +15,7 @@ a920d65000506144447a0ff8c1bb6c2a *man/altitudinal_profile.Rd
 0be7d7a44b2110f98396a6ea2c5d5633 *man/compress.Rd
 daa094d0689ded8c9cba40e8d0739980 *man/denseness_column.Rd
 3464428289ac0cf57d066a9ead022ffd *man/denseness_row.Rd
+f4648970d1ebcda6e4fbb745b09d4f41 *man/denseness_sample.Rd
 568c543a563d1acd895069e3fdb4659e *man/denseness_total.Rd
 8455a2ad9bf1de60797e956cea8724c7 *man/heigh_maximum.Rd
 c63ee824c2ba4742ec0feef143ed7223 *man/heigh_propotion.Rd
@@ -25,6 +26,7 @@ fc28896182a502e6d780bd61edddbfde *man/hole_section.Rd
 07a983b0e3f042227b7a7a1649979399 *man/hole_section_data.Rd
 f2c07750926f0484be4bf27a6a7414f8 *man/image_information.Rd
 e6851f981d3a51c33183e68fa126ecf0 *man/light_gap.Rd
+c8f6166895e8b57ff3e428cf57feb261 *man/plot_samples.Rd
 8bfcc2b028e50c8e20ba6565e30b3e9b *man/stretch.Rd
 911ff767869c027fdabc669f7f4d4014 *man/threshold_color.Rd
 18948e958e50150429a03b83b986a55e *man/threshold_image_list.Rd
